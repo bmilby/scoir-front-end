@@ -7,6 +7,7 @@ This project uses the [React](https://reactjs.org/) JavaScript framework to crea
 1. Install [node.js](https://nodejs.org/)
 1. In the root folder of `scoir-front-end` execute the command `npm start` this will start the front end applicaton
    Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. Start the back-end API service [scoir-back-end](https://github.com/bmilby/scoir-back-end)
 
 ## Assumptions
 
