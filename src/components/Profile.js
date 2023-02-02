@@ -1,11 +1,16 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useOutletContext } from "react-router-dom";
 
 const Profile = () => {
     const [userInfo, setUserInfo] = useState({});
-    let { id } = useParams();
+    const {jwtToken} = useOutletContext();
+    const navigate = useNavigate()
 
     useEffect(() => {
+        if (jwtToken === "") {
+            navigate("/login");
+            return
+        }
         let myProfile = {
             email: "admin@example.com",
             firstName: "Admin",
@@ -13,7 +18,7 @@ const Profile = () => {
         }
         setUserInfo(myProfile);
 
-    }, [id]);
+    }, [jwtToken, navigate]);
 
     return (
         <div>

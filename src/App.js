@@ -118,7 +118,7 @@ function App() {
               <Link to="/" className="list-group-item list-group-item-action">Home</Link>              
               {jwtToken !== "" &&
                 <>
-                  <Link to="/user/profile/0" className="list-group-item list-group-item-action">Profile</Link>
+                  <Link to="/user/profile" className="list-group-item list-group-item-action">Profile</Link>
                 </>
               }
             </div>
@@ -130,7 +130,7 @@ function App() {
             className={alert_class_name}
           />
           <Outlet context={{
-            jwt_token: jwtToken,
+            jwtToken: jwtToken,
             setJwtToken,
             setAlertClassName,
             setAlertMessage,
